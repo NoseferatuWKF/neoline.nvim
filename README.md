@@ -4,10 +4,6 @@
 - [tjdevries](https://github.com/tjdevries) for [express_line](https://github.com/tjdevries/express_line.nvim) plugin
 - [ibhagwam](https://github.com/ibhagwan) for the inspiration and code
 
-## TODO
-- [ ] license
-- [ ] More explanations
-
 ## Overview
 This plugin provides extra extensions, extra integrations, utils and abstractions for express_line.
 - `neoline.mode`: adds customizable options to mode
@@ -31,9 +27,9 @@ This plugin provides extra extensions, extra integrations, utils and abstraction
 ### Lazy
 ```lua
 return {
-  "tjdevries/express_line.nvim",
+  "NoseferatuWKF/neoline.nvim",
   dependencies = {
-    "NoseferatuWKF/neoline.nvim",
+    "tjdevries/express_line.nvim",
     "lewis6991/gitsigns.nvim",
     "nvim-tree/nvim-web-devicons",
   },
@@ -44,7 +40,7 @@ return {
 
     require("el").setup {
       generator = function(_, buffer)
-        -- see :highlight
+        -- see :highlight to see available highlights in neovim
         local highlights = {
           magenta = neoline.extract_hl({
             bg = { ["StatusLine"] = "bg" },
